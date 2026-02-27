@@ -20,7 +20,6 @@ function App() {
               <button className=" text-white bg-orange-600py-4">hire me</button>
             </div>
           </nav>
-  
           <content className="flex flex-col grow justify-center gap-5">
             <h1 className="text-2xl text-white">hi! I am</h1>
             <h1 className="text-2xl text-white">Axel De las ALas</h1>
