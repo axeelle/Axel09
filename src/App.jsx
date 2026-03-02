@@ -1,59 +1,29 @@
-import backgrounds from '../src/assets/blackbg.jpg';
+import Navigationbar from './components/navigationbar';
+import blackbackground from '../src/assets/blackbg.jpg';
+import Home from './routes/home';
+import Service from './routes/service';
+import AboutMe from './routes/aboutme';
+import Portfolio from './routes/portfolio';
+import ContactMe from './routes/contactme';
+
+import { Routes, Route } from 'react-router';
+
 function App() {
-
   return (
-      <main className="flex flex-col h-screen bg-cover w-full" style={{backgroundImage: `url(${backgrounds})`}}>
-        <div className="flex flex-col justify-between h-full"> 
-          <nav className="flex flex-row justify-around pt-5">
-            <div>
-              <h1 className=" text-orange-600 font-extrabold text-3xl ">logo</h1>
-            </div>
-            <div className="flex flex-row justify-center">
-              <ul className="flex text-white cursor-pointer gap-5">
-                <li className="px-4 hover:underline">Home</li>
-                <li className="px-4 hover:underline">Service</li>
-                <li className="px-4 hover:underline">About me</li>
-                <li className="px-4 hover:underline">Portfolio</li>
-                <li className="px-4 hover:underline">Contact me</li>
-              </ul>
-            </div>
-            <div className="">  
-              <button className=" text-white bg-orange-800 py-3 px-10 rounded-2xl">hire me</button>
-            </div>
-          </nav>
-          <content className="flex flex-col grow justify-center gap-5 pl-7">
-            <h1 className="text-2xl text-white">hi! I am</h1>
-            <h1 className="text-2xl text-white">Axel De las ALas</h1>
-            <h1 className=" text-7xl text-amber-800">MY PORTFOLIO</h1>
-            <icon>
-              <ul className=" inline-flex gap-5 text-white">
-                <li>icon1</li>
-                <li>icon2</li>
-                <li>icon3</li>
-                <li>icon4</li>
-              </ul>
-            </icon>
-            <buttonn className="flex flex-row gap-5">
-              <button className=" bg-orange-800 rounded-2xl px-6 py-2 text-white">Hire Me</button>
-              <button className=" bg-black border rounded-2xl px-6 py-2 text-white">Download CV</button>
-            </buttonn>
-            <others>
-                <ul className="inline-grid grid-cols-3 border-2 border-white text-white bg-gray-900 rounded-2xl py-5 divide-x divide-white">
-                  <li className="px-6 text-amber-800 text-center font-bold">5+</li>
-                  <li className="px-6 text-amber-800 text-center font-bold">20+</li>
-                  <li className="px-6 text-amber-800 text-center font-bold">80+</li>
-                  <li className="px-6 text-sm text-center pt-2">Experience</li>
-                  <li className="px-6 text-sm text-center pt-2">Project Done</li>
-                  <li className="px-6 text-sm text-center pt-2">Happy Clients</li>
-                </ul>
+    <>    
+      <div className="flex flex-col h-screen bg-cover w-full" style={{ backgroundImage: `url(${blackbackground})` }}>
+        <Navigationbar/>
+        <Routes>
+          <Route path='/Home' element={<Home />}/>
+          <Route path='/Service' element={<Service />}/>
+          <Route path='/AboutMe' element={<AboutMe />}/>
+          <Route path='Portfolio' element={<Portfolio />}/>
+          <Route path='/ContactMe' element={<ContactMe />}/>
+        </Routes>
+      </div>
+    </>
 
-            </others>
-          </content>
-        </div>
-      </main>
-
-
-  )
+  );
 }
 
-export default App
+export default App;
