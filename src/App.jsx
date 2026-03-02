@@ -9,12 +9,12 @@ import ContactMe from './routes/contactme';
 import { Routes, Route } from 'react-router';
 
 function App() {
-  return (
+  return ( 
     <>    
       <div className="flex flex-col h-screen bg-cover w-full" style={{ backgroundImage: `url(${blackbackground})` }}>
         <Navigationbar/>
         <Routes>
-          <Route path='/Home' element={<Home />}/>
+          <Route path='/' element={<Home />}/>
           <Route path='/Service' element={<Service />}/>
           <Route path='/AboutMe' element={<AboutMe />}/>
           <Route path='Portfolio' element={<Portfolio />}/>

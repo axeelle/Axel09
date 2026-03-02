@@ -13,7 +13,7 @@ function portfolio() {
                 <li>icon2</li>
                 <li>icon3</li>
                 <li>icon4</li>  
-              </ul>
+              </ul> 
             </icon>
             <buttonn className="flex gap-5">
               <button className=" bg-orange-800 rounded-2xl px-6 py-2 text-white">Hire Me</button>

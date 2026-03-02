@@ -14,7 +14,7 @@ function home() {
                 <li>icon1</li>
                 <li>icon2</li>
                 <li>icon3</li>
-                <li>icon4</li>
+                <li>icon4</li>  
               </ul>
             </icon>
             <buttonn className="flex gap-5">
