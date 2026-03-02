@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'; // 1. Import NavLink instead of Link
 import { BiLogoReact } from 'react-icons/bi';
-
+import { DiGithubBadge } from 'react-icons/di';
 function Navigationbar() {
  
   const navLinkClass = ({ isActive }) =>
@@ -12,7 +12,7 @@ function Navigationbar() {
   return (
     <nav className="flex flex-row justify-around pt-5 bg-black">
       <div>
-        <h1 className="text-orange-600 font-extrabold text-6xl"><BiLogoReact /></h1>
+        <h1 className="text-blue-600 font-extrabold text-6xl"><BiLogoReact /></h1>
       </div>
       <div className="flex flex-row justify-center">
         <ul className="flex text-white cursor-pointer gap-5">
@@ -23,9 +23,9 @@ function Navigationbar() {
           <NavLink to="/Portfolio" className={navLinkClass}>Portfolio</NavLink>
           <NavLink to="/ContactMe" className={navLinkClass}>Contact me</NavLink>
         </ul>
-      </div>
+      </div>  
       <div className="">
-        <button className="text-white bg-orange-800 py-3 px-10 rounded-2xl">Hire Me</button>
+        <a className=" text-amber-50 text-6xl" href="https://github.com/axeelle/Axel09"><DiGithubBadge/></a>
       </div>
     </nav>
   );

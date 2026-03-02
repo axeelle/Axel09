@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from "react-router"
 function home() {
 
   return (
@@ -16,10 +16,10 @@ function home() {
                 <li>icon3</li>
                 <li>icon4</li>  
               </ul>
-            </icon>
+            </icon> 
             <buttonn className="flex gap-5">
-              <button className=" bg-orange-800 rounded-2xl px-6 py-2 text-white">Hire Me</button>
-              <button className=" bg-black border rounded-2xl px-6 py-2 text-white">Download CV</button>
+             <Link to="/contactme" class="bg-orange-800 rounded-2xl px-6 py-3 text-white font-semibold hover:bg-orange-700 transition duration-300">Hire Me</Link>
+              <a href="[Link to Download CV]" download class="bg-black border border-white rounded-2xl px-6 py-3 text-white font-semibold hover:bg-gray-800 transition duration-300">Download CV</a>
             </buttonn>
             <others>
                 <ul className="inline-grid grid-cols-3 border-2 border-white text-white bg-gray-900 rounded-2xl py-5 divide-x divide-white">
@@ -31,7 +31,7 @@ function home() {
                   <li className="px-6 text-sm text-center pt-2">Happy Clients</li>
                 </ul>
 
-            </others>
+            </others> 
           </content>
         </div>
   )
