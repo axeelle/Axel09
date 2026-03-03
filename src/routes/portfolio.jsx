@@ -1,37 +1,102 @@
-import React from "react"
+import React from "react";
 
-function portfolio() {
-    return(
-            <div className="flex flex-col justify-between h-full"> 
-          <content className="flex flex-col grow justify-center gap-5 pl-7">
-            <h1 className="text-2xl text-white">hi! I am</h1>
-            <h1 className="text-2xl text-white">Axel De las ALas</h1>
-            <h1 className=" text-7xl text-amber-800">PORTFOLIO</h1>
-            <icon>
-              <ul className=" inline-flex gap-5 text-white">
-                <li>icon1</li>
-                <li>icon2</li>
-                <li>icon3</li>
-                <li>icon4</li>  
-              </ul> 
-            </icon>
-            <buttonn className="flex gap-5">
-              <button className=" bg-orange-800 rounded-2xl px-6 py-2 text-white">Hire Me</button>
-              <button className=" bg-black border rounded-2xl px-6 py-2 text-white">Download CV</button>
-            </buttonn>
-            <others>
-                <ul className="inline-grid grid-cols-3 border-2 border-white text-white bg-gray-900 rounded-2xl py-5 divide-x divide-white">
-                  <li className="px-6 text-amber-800 text-center font-bold">5+</li>
-                  <li className="px-6 text-amber-800 text-center font-bold">20+</li>
-                  <li className="px-6 text-amber-800 text-center font-bold">80+</li>
-                  <li className="px-6 text-sm text-center pt-2">Experience</li>
-                  <li className="px-6 text-sm text-center pt-2">Project Done</li>
-                  <li className="px-6 text-sm text-center pt-2">Happy Clients</li>
-                </ul>
+function Portfolio() {
 
-            </others>
-          </content>
+  const projects = [
+    {
+      title: "Bus Tracking System",
+      description: "IoT and Cloud based real-time GPS tracking system for buses.",
+      tech: ["React", "Node.js", "Firebase"],
+      image: "https://via.placeholder.com/400x250",
+      github: "#",
+      demo: "#"
+    },
+    {
+      title: "Coffee Shop Management",
+      description: "A management system for orders, payments, and customer data.",
+      tech: ["PHP", "MySQL", "Bootstrap"],
+      image: "https://via.placeholder.com/400x250",
+      github: "#",
+      demo: "#"
+    },
+    {
+      title: "Obstacle Avoiding Robot",
+      description: "Arduino robot that detects obstacles and navigates automatically.",
+      tech: ["Arduino", "Sensors", "C++"],
+      image: "https://via.placeholder.com/400x250",
+      github: "#",
+      demo: "#"
+    },
+  ];
+
+  return (
+<section className="h-screen overflow-hidden bg-gray-950 text-white px-10 py-10 flex flex-col">
+
+  {/* Title */}
+  <div className="text-center mb-8">
+    <h1 className="text-4xl font-bold text-amber-600">My Portfolio</h1>
+    <p className="text-gray-400 mt-2 text-sm">
+      Here are some of the projects I have worked on
+    </p>
+  </div>
+
+  {/* Project Grid */}
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 flex-grow content-center">
+
+    {projects.map((project, index) => (
+      <div
+        key={index}
+        className="bg-gray-900 rounded-xl overflow-hidden shadow-md hover:scale-105 transition duration-300"
+      >
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-40 object-cover"
+        />
+
+        <div className="p-4 space-y-3">
+          <h2 className="text-lg font-semibold text-amber-500">
+            {project.title}
+          </h2>
+
+          <p className="text-gray-400 text-xs">
+            {project.description}
+          </p>
+
+          <div className="flex flex-wrap gap-1">
+            {project.tech.map((tech, i) => (
+              <span
+                key={i}
+                className="text-[10px] bg-gray-800 px-2 py-1 rounded-full"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex gap-2 pt-1">
+            <a
+              href={project.github}
+              className="text-xs px-3 py-1 bg-gray-800 rounded-md hover:bg-gray-700"
+            >
+              GitHub
+            </a>
+
+            <a
+              href={project.demo}
+              className="text-xs px-3 py-1 bg-amber-600 rounded-md hover:bg-amber-500"
+            >
+              Live Demo
+            </a>
+          </div>
         </div>
-    )
+      </div>
+    ))}
+
+  </div>
+
+</section>
+  );
 }
-export default portfolio
+
+export default Portfolio;

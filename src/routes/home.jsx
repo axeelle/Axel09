@@ -1,40 +1,90 @@
-import React from "react"
-import { Link } from "react-router"
-function home() {
+import React from "react";
+import { Link } from "react-router";
+import Profile from "../assets/profile.jpg";
 
+function Home() {
   return (
-    
-        <div className="flex flex-col justify-between h-full"> 
-          <content className="flex flex-col grow justify-center gap-5 pl-7">
-            <h1 className="text-2xl text-white">hi! I am</h1>
-            <h1 className="text-2xl text-white">Axel De las ALas</h1>
-            <h1 className=" text-7xl text-amber-800">MY PORTFOLIO</h1>
-            <icon>
-              <ul className=" inline-flex gap-5 text-white">
-                <li>icon1</li>
-                <li>icon2</li>
-                <li>icon3</li>
-                <li>icon4</li>  
-              </ul>
-            </icon> 
-            <buttonn className="flex gap-5">
-             <Link to="/contactme" class="bg-orange-800 rounded-2xl px-6 py-3 text-white font-semibold hover:bg-orange-700 transition duration-300">Hire Me</Link>
-              <a href="[Link to Download CV]" download class="bg-black border border-white rounded-2xl px-6 py-3 text-white font-semibold hover:bg-gray-800 transition duration-300">Download CV</a>
-            </buttonn>
-            <others>
-                <ul className="inline-grid grid-cols-3 border-2 border-white text-white bg-gray-900 rounded-2xl py-5 divide-x divide-white">
-                  <li className="px-6 text-amber-800 text-center font-bold">5+</li>
-                  <li className="px-6 text-amber-800 text-center font-bold">20+</li>
-                  <li className="px-6 text-amber-800 text-center font-bold">80+</li>
-                  <li className="px-6 text-sm text-center pt-2">Experience</li>
-                  <li className="px-6 text-sm text-center pt-2">Project Done</li>
-                  <li className="px-6 text-sm text-center pt-2">Happy Clients</li>
-                </ul>
+    <section className="h-screen overflow-hidden flex items-center justify-between px-16 bg-linear-to-r from-gray-950 to-gray-900">
 
-            </others> 
-          </content>
+      {/* LEFT SIDE */}
+      <div className="max-w-xl space-y-6">
+
+        <div>
+          <p className="text-gray-300 text-lg">Hi! I am</p>
+
+          <h1 className="text-4xl font-semibold text-white">
+            Axel De las Alas
+          </h1>
+
+          <h2 className="text-7xl font-bold text-amber-700 mt-2">
+            MY PORTFOLIO
+          </h2>
         </div>
-  )
+
+        {/* Social Icons */}
+        <ul className="flex gap-6 text-white text-lg">
+          <li className="hover:text-amber-600 cursor-pointer transition">icon1</li>
+          <li className="hover:text-amber-600 cursor-pointer transition">icon2</li>
+          <li className="hover:text-amber-600 cursor-pointer transition">icon3</li>
+          <li className="hover:text-amber-600 cursor-pointer transition">icon4</li>
+        </ul>
+
+        {/* Buttons */}
+        <div className="flex gap-4">
+          <Link
+            to="/contactme"
+            className="bg-amber-700 px-6 py-3 rounded-xl text-white font-semibold hover:bg-amber-600 transition shadow-lg"
+          >
+            Hire Me
+          </Link>
+
+          <a
+            href="#"
+            download
+            className="border border-white px-6 py-3 rounded-xl text-white font-semibold hover:bg-white hover:text-black transition"
+          >
+            Download CV
+          </a>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-3 mt-8 bg-gray-900 border border-gray-700 rounded-2xl overflow-hidden text-center">
+
+          <div className="py-6">
+            <p className="text-amber-600 text-2xl font-bold">3+</p>
+            <p className="text-gray-300 text-sm mt-1">Learning</p>
+          </div>
+
+          <div className="py-6 border-x border-gray-700">
+            <p className="text-amber-600 text-2xl font-bold">3+</p>
+            <p className="text-gray-300 text-sm mt-1">Academic Projects</p>
+          </div>
+
+          <div className="py-6">
+            <p className="text-amber-600 text-2xl font-bold">3+</p>
+            <p className="text-gray-300 text-sm mt-1">Team Collaborations</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* RIGHT SIDE (PHOTO) */}
+      <div className="relative">
+
+        {/* Glow */}
+        <div className="absolute inset-0 bg-amber-700 blur-3xl opacity-20 rounded-full"></div>
+
+        <img
+          src={Profile}
+          alt="Axel"
+          className="relative w-87.5 rounded-3xl shadow-2xl border-4 border-gray-800"
+        />
+
+      </div>
+
+    </section>
+  );
 }
 
-export default home
+export default Home;

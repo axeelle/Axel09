@@ -1,24 +1,39 @@
-import React from "react"
+import React from "react";
 
-function service() {
-
+function Service() {
   return (
-    
-    <>
-        <div className=" flex flex-row justify-center h-full w-screen">
-          <div className="flex flex-col">
-          <h1 className=" text-white leading-50 text-6xl">My Service</h1>
-          <p className="text-white self-center">Home/service</p>
-          </div>
-        </div>  
-        <div className=" flex flex-row justify-around pb-40">
-          <p className="text-white">Lorem In printer took a galley of type and <br /> fivremaining essentially unchanged. It was popularised in the 1960s <br />with the release of Letraset sheets containing Lorem Ipsum passages, <br />and more recently with desktop publishing nr
-          software like Aldus <br />PageMaker including versions of Lorem Ipsum.</p>
-          <h1 className="text-white">this is for photo</h1>
+    <div className="bg-black h-screen overflow-hidden text-white">
+      
+      {/* Hero Section */}
+      <div className="flex flex-col items-center justify-center text-center py-20 px-6">
+        <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          My Service
+        </h1>
+        <p className="text-gray-400">Home / Service</p>
+      </div>
+
+      {/* Content Section */}
+      <div className="flex flex-col md:flex-row items-center justify-between gap-10 px-10 md:px-20 pb-20">
+        
+        {/* Text */}
+        <div className="max-w-xl text-gray-300 leading-relaxed">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting 
+            industry. It has survived not only five centuries, but also the 
+            leap into electronic typesetting, remaining essentially unchanged.
+            It was popularised in the 1960s with the release of Letraset sheets.
+          </p>
         </div>
-    </>
-       
-  )
+
+        {/* Image Placeholder */}
+        <div className="w-full md:w-1/2 h-64 bg-gray-700 flex items-center justify-center rounded-lg">
+          <span className="text-gray-300">Photo Here</span>
+        </div>
+
+      </div>
+
+    </div>
+  );
 }
 
-export default service
+export default Service;

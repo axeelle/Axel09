@@ -1,25 +1,55 @@
-import React from "react"
+import React from "react";
 
-function contactme() {
-    return(
-        <div className=" flex flex-row justify-center w-screen h-full">
-          <div className="flex flex-col justify-around">
-             <div className="flex flex-col gap-6">
-              <h1 className="text-white text-5xl"> have a project in mind</h1>
-              <p className="text-white self-center    ">mini texthhfdhafidsahfiusadhfidushgfafd</p>
-              <button className=" bg-orange-600 text-white w-20 h-10 self-center"> contactme</button>
-             </div>
-         
-              <div className="  text-white">
-                <ul className="flex flex-row justify-center gap-6">
-                  <li>icon1</li>
-                  <li>icon2</li>
-                  <li>icon3</li>
-                </ul>
-              </div>  
-          </div>
-        
+function ContactMe() {
+  return (
+    <section className="h-screen flex items-center justify-center bg-gray-950 px-6">
+
+      <div className="bg-gray-900 p-12 rounded-2xl shadow-xl w-full max-w-xl space-y-8">
+
+        {/* Title */}
+        <div className="text-center">
+          <h1 className="text-4xl text-white font-bold">
+            Have a Project in Mind?
+          </h1>
+          <p className="text-gray-400 mt-3">
+            Feel free to contact me. I'm always open to discussing new projects.
+          </p>
         </div>
-    )
+
+        {/* Contact Form */}
+        <form className="flex flex-col gap-4">
+
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="p-3 rounded-lg bg-gray-800 text-white outline-none focus:ring-2 focus:ring-amber-600"
+          />
+
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="p-3 rounded-lg bg-gray-800 text-white outline-none focus:ring-2 focus:ring-amber-600"
+          />
+
+          <textarea
+            rows="4"
+            placeholder="Your Message"
+            className="p-3 rounded-lg bg-gray-800 text-white outline-none focus:ring-2 focus:ring-amber-600"
+          />
+
+          <button
+            type="submit"
+            className="bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-500 transition"
+          >
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+  );
 }
-export default contactme
+
+export default ContactMe;
