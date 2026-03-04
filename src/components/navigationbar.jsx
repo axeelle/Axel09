@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'; // 1. Import NavLink instead of Link
+import { NavLink } from 'react-router-dom'; 
 import { BiLogoReact } from 'react-icons/bi';
 import { DiGithubBadge } from 'react-icons/di';
 function Navigationbar() {
@@ -12,10 +12,10 @@ function Navigationbar() {
   return (
     <nav className="flex flex-row justify-around pt-5 bg-black">
       <div>
-        <h1 className="text-blue-600 font-extrabold text-6xl"><BiLogoReact /></h1>
+        <h1 className="text-blue-300 font-extrabold text-6xl"><BiLogoReact /></h1>
       </div>
       <div className="flex flex-row justify-center">
-        <ul className="flex text-white cursor-pointer gap-5">
+        <ul className="flex text-white cursor-pointer gap-5 font-Poppins">
         
           <NavLink to="/" className={navLinkClass}>Home</NavLink>
           <NavLink to="/Service" className={navLinkClass}>Service</NavLink>
@@ -32,3 +32,4 @@ function Navigationbar() {
 }
 
 export default Navigationbar;
+  

@@ -7,7 +7,7 @@ import { IoMdMusicalNotes } from "react-icons/io";
 
 function Home() {
   return (
-    <section className="h-screen overflow-hidden flex items-center justify-between px-16 bg-linear-to-r from-gray-950 to-gray-900">
+    <section className="h-screen overflow-hidden flex items-center justify-around md:px-16 bg-linear-to-r from-gray-950 to-gray-900">
 
 
       <div className="max-w-xl space-y-6">
@@ -15,7 +15,7 @@ function Home() {
         <div>
           <p className="text-gray-300 text-lg">Hi! I am</p>
 
-          <h1 className="text-4xl font-semibold text-white">
+          <h1 className="text-4xl font-semibold text-white font-Poppins">
             Axel De las Alas
           </h1>
 
