@@ -1,4 +1,7 @@
 import React from "react";
+import Bustracking from '../assets/bustracking.jpeg';
+import Coffee from '../assets/coffee.png';
+import Robot from '../assets/robot.jpeg';
 
 function Portfolio() {
 
@@ -7,15 +10,15 @@ function Portfolio() {
       title: "Bus Tracking System",
       description: "IoT and Cloud based real-time GPS tracking system for buses.",
       tech: ["React", "Node.js", "Firebase"],
-      image: "https://via.placeholder.com/400x250",
+      image: Bustracking,
       github: "#",
       demo: "#"
     },
     {
       title: "Coffee Shop Management",
       description: "A management system for orders, payments, and customer data.",
-      tech: ["PHP", "MySQL", "Bootstrap"],
-      image: "https://via.placeholder.com/400x250",
+      tech: ["PHP", "MySQL", "HTML/CSS/JS"],
+      image: Coffee ,
       github: "#",
       demo: "#"
     },
@@ -23,7 +26,7 @@ function Portfolio() {
       title: "Obstacle Avoiding Robot",
       description: "Arduino robot that detects obstacles and navigates automatically.",
       tech: ["Arduino", "Sensors", "C++"],
-      image: "https://via.placeholder.com/400x250",
+      image: Robot,
       github: "#",
       demo: "#"
     },
@@ -32,7 +35,7 @@ function Portfolio() {
   return (
 <section className="h-screen overflow-hidden bg-gray-950 text-white px-10 py-10 flex flex-col">
 
-  {/* Title */}
+
   <div className="text-center mb-8">
     <h1 className="text-4xl font-bold text-amber-600">My Portfolio</h1>
     <p className="text-gray-400 mt-2 text-sm">
@@ -40,8 +43,8 @@ function Portfolio() {
     </p>
   </div>
 
-  {/* Project Grid */}
-  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 flex-grow content-center">
+    
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 grow content-center">
 
     {projects.map((project, index) => (
       <div

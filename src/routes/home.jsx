@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router";
 import Profile from "../assets/profile.jpg";
+import { IoGameControllerSharp } from "react-icons/io5";
+import { MdSportsBasketball } from "react-icons/md";
+import { IoMdMusicalNotes } from "react-icons/io";
 
 function Home() {
   return (
     <section className="h-screen overflow-hidden flex items-center justify-between px-16 bg-linear-to-r from-gray-950 to-gray-900">
 
-      {/* LEFT SIDE */}
+
       <div className="max-w-xl space-y-6">
 
         <div>
@@ -16,20 +19,18 @@ function Home() {
             Axel De las Alas
           </h1>
 
-          <h2 className="text-7xl font-bold text-amber-700 mt-2">
+          <h2 className="text-7xl font-bold text-amber-700 pt-2">
             MY PORTFOLIO
           </h2>
         </div>
 
-        {/* Social Icons */}
-        <ul className="flex gap-6 text-white text-lg">
-          <li className="hover:text-amber-600 cursor-pointer transition">icon1</li>
-          <li className="hover:text-amber-600 cursor-pointer transition">icon2</li>
-          <li className="hover:text-amber-600 cursor-pointer transition">icon3</li>
-          <li className="hover:text-amber-600 cursor-pointer transition">icon4</li>
+        <ul className="flex gap-6 text-white text-5xl">
+          <li className="hover:text-amber-600 cursor-pointer transition"><IoGameControllerSharp/></li>
+          <li className="hover:text-amber-600 cursor-pointer transition"><MdSportsBasketball/></li>
+          <li className="hover:text-amber-600 cursor-pointer transition"><IoMdMusicalNotes/></li>
         </ul>
 
-        {/* Buttons */}
+   
         <div className="flex gap-4">
           <Link
             to="/contactme"
@@ -47,12 +48,12 @@ function Home() {
           </a>
         </div>
 
-        {/* Stats */}
+   
         <div className="grid grid-cols-3 mt-8 bg-gray-900 border border-gray-700 rounded-2xl overflow-hidden text-center">
 
           <div className="py-6">
             <p className="text-amber-600 text-2xl font-bold">3+</p>
-            <p className="text-gray-300 text-sm mt-1">Learning</p>
+            <p className="text-gray-300 text-sm mt-1">Years Learning</p>
           </div>
 
           <div className="py-6 border-x border-gray-700">
@@ -69,10 +70,9 @@ function Home() {
 
       </div>
 
-      {/* RIGHT SIDE (PHOTO) */}
       <div className="relative">
 
-        {/* Glow */}
+        
         <div className="absolute inset-0 bg-amber-700 blur-3xl opacity-20 rounded-full"></div>
 
         <img

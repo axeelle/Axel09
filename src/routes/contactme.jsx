@@ -6,17 +6,17 @@ function ContactMe() {
 
       <div className="bg-gray-900 p-12 rounded-2xl shadow-xl w-full max-w-xl space-y-8">
 
-        {/* Title */}
+       
         <div className="text-center">
           <h1 className="text-4xl text-white font-bold">
             Have a Project in Mind?
           </h1>
-          <p className="text-gray-400 mt-3">
+          <p className="text-gray-400 pt-3">
             Feel free to contact me. I'm always open to discussing new projects.
           </p>
         </div>
 
-        {/* Contact Form */}
+      
         <form className="flex flex-col gap-4">
 
           <input
