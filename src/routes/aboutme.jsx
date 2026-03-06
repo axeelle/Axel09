@@ -5,7 +5,7 @@ function AboutMe() {
   const skills = ["React", "Tailwind CSS", "JavaScript", "Node.js", "UI/UX"];
 
   return (
-    <section className="bg-black text-white pb-20 w-full h-screen flex items-center justify-center bg-cover">
+  <section className="h-screen overflow-y-auto bg-gray-950 text-white px-10 py-10 flex flex-col lg:flex-row pt-20">
 
       <div className="container mx-auto px-6 flex flex-col sm:flex-row justify-center items-center gap-12">
         
@@ -21,7 +21,7 @@ function AboutMe() {
           <h2 className="text-5xl font-extrabold text-orange-500 tracking-tight">
             About <span className="text-white">Me</span>
           </h2>
-          <p className="text-gray-300 leading-relaxed text-lg">
+          <p className="text-gray-300 leading-relaxed text-lg">   
             I am a passionate student developer focused on building clean, functional websites. 
             I enjoy turning complex problems into simple, beautiful, and intuitive user experiences.
           </p>

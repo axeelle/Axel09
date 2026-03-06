@@ -2,7 +2,7 @@ import React from "react";
 
 function ContactMe() {
   return (
-    <section className="h-screen flex items-center justify-center bg-gray-950 px-6">
+    <section className="h-screen flex items-center justify-center bg-gray-950 px-6 overflow-y-auto sm:px-6 sm:py-20">
 
       <div className="bg-gray-900 p-12 rounded-2xl shadow-xl w-full max-w-xl space-y-8">
 

@@ -4,8 +4,8 @@ import Coding from '../assets/coding.jpg';
 
 function Service() {
   return (
-    <div className="bg-black text-white px-6 h-screen w-screen bg-cover flex items-center justify-center">
-      <div className="flex flex-col items-center justify-center text-center">
+  <section className="m-h-screen overflow-y-auto bg-gray-950 text-white px-10 py-10 flex flex-col">
+      <div className="flex flex-col items-center justify-center text-center lg:pt-10">
         
 
         <h1 className="text-5xl font-bold leading-30">
@@ -13,7 +13,7 @@ function Service() {
         </h1>
         
 
-        <div className="flex flex-col items-center justify-around gap-10 pb-10 font-Poppins">
+        <div className="flex flex-col items-center justify-around gap-10 font-Poppins md:text-1/2">
 
           <div className="w-full max-w-md h-64 bg-gray-700 flex items-center justify-center rounded-lg shadow-lg">
             <img src={Coding} alt="" />
@@ -46,7 +46,7 @@ function Service() {
         </div>
 
       </div>
-    </div>
+    </section>
   );
 }
 

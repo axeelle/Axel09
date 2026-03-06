@@ -33,7 +33,7 @@ function Portfolio() {
   ];
 
   return (
-<section className="h-screen overflow-hidden bg-gray-950 text-white px-10 py-10 flex flex-col">
+<section className="h-screen overflow-y-auto  bg-gray-950 text-white px-10 py-20 flex flex-col lg:pt-40">
 
 
   <div className="text-center mb-8">
@@ -46,7 +46,7 @@ function Portfolio() {
       
   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 grow content-center">
 
-    {projects.map((project, index) => (
+    {projects.map((project, index) => ( 
       <div
         key={index}
         className="bg-gray-900 rounded-xl overflow-hidden shadow-md hover:scale-105 transition duration-300"
